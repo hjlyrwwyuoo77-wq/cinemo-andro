@@ -1,8 +1,9 @@
-package com.example.myapp
+
+package com.cinemo.app
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapp.databinding.ActivityMainBinding
+import com.cinemo.app.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
