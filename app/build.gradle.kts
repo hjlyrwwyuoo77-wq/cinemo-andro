@@ -1,14 +1,15 @@
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
 }
 
 android {
-    namespace = "com.example.myapp"
+    namespace = "com.cinemo.app"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.myapp"
+        applicationId = "com.cinemo.app"
         minSdk = 26
         targetSdk = 35
         versionCode = 1
@@ -24,7 +25,12 @@ android {
             val keyAlias = System.getenv("ANDROID_KEY_ALIAS")
             val keyPassword = System.getenv("ANDROID_KEY_PASSWORD")
 
-            if (keystorePath != null && keystorePassword != null && keyAlias != null && keyPassword != null) {
+            if (
+                keystorePath != null &&
+                keystorePassword != null &&
+                keyAlias != null &&
+                keyPassword != null
+            ) {
                 storeFile = file(keystorePath)
                 storePassword = keystorePassword
                 this.keyAlias = keyAlias
@@ -42,6 +48,7 @@ android {
             )
             signingConfig = signingConfigs.getByName("release")
         }
+
         debug {
             applicationIdSuffix = ".debug"
         }
